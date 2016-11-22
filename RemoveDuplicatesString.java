@@ -18,6 +18,23 @@ public class RemoveDuplicatesString2 {
      * @param args the command line arguments
      */
     
+    //ALTERNATE METHOD: Using second array
+    /*
+    public static String removeDuplicates(String input)
+    {
+        String result = "";
+        
+        for(int i = 0; i<input.length(); i++)
+        {
+            if(!result.contains(String.valueOf(input.charAt(i))))
+            {
+                result += String.valueOf((input.charAt(i)));
+            }
+        }
+        return result;
+    }
+    */
+    
     public static String removeDuplicates(String str)
     {
         Set<Character> charSet = new LinkedHashSet<>();
