@@ -62,5 +62,5 @@ public class StringReplaceWhiteSpace {
         String newStr = replaceWhiteSpace(str.toCharArray());
         System.out.println(newStr);
     }
-    
+  
 }
