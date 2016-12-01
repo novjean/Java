@@ -29,6 +29,8 @@ public class HashTableDemo {
         
         theFunc.hashFunction2(elementsToAdd2, theFunc.theArray);
         
+	theFunc.findKey("415");			//since the hashtable is full, have to enter a number that already exists
+	    
         theFunc.displayTheHashtable();
         
     }
@@ -57,6 +59,28 @@ public class HashTableDemo {
         
     }
     
+    public String findKey(String key){              //function to find where the number is stored in the hashtable
+        
+        int arrayIndexHash = Integer.parseInt(key) % 29;    //perform the same equaion as the way you entered into the hashtable
+        
+        while(theArray[arrayIndexHash] != "-1"){	//this is to break if the hastable is not full
+            
+            if(theArray[arrayIndexHash] == key){	//check if the value in the index == key
+                
+                System.out.println(key + " was found in Index " + arrayIndexHash);
+                
+                return theArray[arrayIndexHash];
+            }
+            
+            ++arrayIndexHash;				//incerement to the next position because thats the way it is defined in the hashtable
+            
+            arrayIndexHash %= arraySize;            //if the last index is reached, go to the 0th index n continue
+        }
+        
+        return null;
+    }
+    
+	
     HashTableDemo(int size)   //receive size for the array
     {
         arraySize = size;
