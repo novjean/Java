@@ -4,7 +4,9 @@ package arraylistdemo;
 import java.util.ArrayList;
 
 /**
- *
+ * It still provides O(1) access. 
+ when the vector is full, the array doubles in size. 
+ each doubling takes O(n) times but it happens so rarely and the amortized time is O(1);
  * @author Novjean
  */
 public class ArrayListDemo {
