@@ -1,7 +1,7 @@
 package bubblesort;
 
 /**
- * Time complexity for bubblesort is O(n2)
+ *
  * @author Novjean
  */
 public class BubbleSort {
@@ -28,13 +28,26 @@ public class BubbleSort {
         }
     }
     
+    public static void InsertionSort(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            int key = arr[i];                               
+            int j=i-1;                                      
+            while(j>=0 && key < arr[j]){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = key;
+        }
+    }
+    
     public static void main(String[] args) {
         int[] arr = {5,1,6,2,4,3,52,32,1,2,42,6,7,5,32,9,60,7,54};
       
         System.out.println("Before sorting: ");
         DisplayArray(arr);
         
-        BubbleSort(arr);
+        //BubbleSort(arr);
+        InsertionSort(arr);
         
         System.out.println("After sorting: ");
         DisplayArray(arr);
