@@ -1,7 +1,7 @@
 package bubblesort;
 
 /**
- *
+ * Time complexity for bubblesort is O(n2)
  * @author Novjean
  */
 public class BubbleSort {
