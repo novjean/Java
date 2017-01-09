@@ -1,0 +1,28 @@
+/*
+Print grade of user from 0-100 range
+ */
+package printgradeifelse;
+
+import java.util.Scanner;
+
+
+public class PrintGradeIfElse {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number between 1-100: ");
+        int inputNum = in.nextInt();
+        
+        if((inputNum/10) == 10)
+            System.out.println("Perfect Score.");
+        else if(inputNum/10 == 9)
+            System.out.println("Excellent");
+        else if(inputNum/10 == 8)
+            System.out.println("Nice");
+        else if(inputNum/10 == 7)
+            System.out.println("Average");
+        else
+            System.out.println("Below average");
+    }
+    
+}
