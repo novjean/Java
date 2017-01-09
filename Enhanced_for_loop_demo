@@ -1,0 +1,22 @@
+/*
+Demo of Enhanced for loop
+ */
+package enhancedforloopdemo;
+
+
+
+/**
+ *
+ * @author Novjean
+ */
+public class EnhancedForLoopDemo {
+
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        for(int value: arr){
+            System.out.println(value);
+        }
+    }
+    
+}
